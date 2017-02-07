@@ -1,7 +1,7 @@
 """
 cryptography.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Brendan
+Credit: Dennison
 
 Assignment:
 
@@ -33,8 +33,8 @@ if input1 == 'e':
             j=j+1
         else:
             j=0
-enc = [associations[x] for x in enc]
-print("".join(enc))
+    enc = [associations[x] for x in enc]
+    print("".join(enc))
 elif input1 == 'd':
     message = input('Message: ')
     key = input('Key: ')
