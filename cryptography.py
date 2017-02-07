@@ -17,27 +17,50 @@ input1 = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 if input1 == 'e':
     message = input('Message: ')
     key = input('Key: ')
+    message = list(message)
+    message = [associations.find(x) for x in message]
+    key = list(key)
+    key = [associations.find(x) for x in key]
+    key = [int(x) for x in key]
+    message = [int(x) for x in message]
+    enc = message
+    i=0
+    j=0
+    while i < len(message):
+        enc[i] = message[i] + key[j]
+        i=i+1
+        if j < len(key)-1:
+            j=j+1
+        else:
+            j=0
+enc = [associations[x] for x in enc]
+print("".join(enc))
 elif input1 == 'd':
     message = input('Message: ')
     key = input('Key: ')
+    message = list(message)
+    message = [associations.find(x) for x in message]
+    key = list(key)
+    key = [associations.find(x) for x in key]
+    key = [int(x) for x in key]
+    message = [int(x) for x in message]
+    enc = message
+    i=0
+    j=0
+    while i < len(message):
+        enc[i] = message[i] - key[j]
+        i=i+1
+        if j < len(key)-1:
+            j=j+1
+        else:
+            j=0
+    enc = [associations[x] for x in enc]
+    print("".join(enc))
 elif input1 == 'q':
     print('Goodbye! ')
 else: 
     print('Did not understand command, try again.')
 
-message = list(message)
-message = [associations.find(x) for x in message]
-key = list(key)
-key = [associations.find(x) for x in key]
-key = [int(x) for x in key]
-message = [int(x) for x in message]
-enc = message
-i=0
-j=0
-while i < len(message):
-    enc = message[i] + key[j]
-    i+1
-    j+1
 
 
 
