@@ -11,7 +11,7 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 
 
-associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
+associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
 input1 = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 if input1 == 'e':
